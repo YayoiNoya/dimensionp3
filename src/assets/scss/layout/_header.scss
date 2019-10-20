@@ -135,6 +135,10 @@
 				}
 			}
 
+			.entrybtn {
+				@include vendor('display', 'grid');
+			}
+
 			&.use-middle {
 				&:after {
 					content: '';
