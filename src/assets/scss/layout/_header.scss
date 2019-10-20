@@ -84,10 +84,14 @@
 				}
 			}
 
+			h1 {
+				text-transform: none;
+			}
+
 			p {
-				text-transform: uppercase;
+				text-transform: none;
 				letter-spacing: _font(letter-spacing);
-				font-size: 0.8rem;
+				font-size: 0.85rem;
 				line-height: 2;
 			}
 		}
@@ -95,7 +99,7 @@
 		nav {
 			ul {
 				@include vendor('display', 'flex');
-				margin-bottom: 0;
+				margin-bottom: 2.75rem;
 				list-style: none;
 				padding-left: 0;
 				border: solid _size(border-width) _palette(border);
@@ -111,7 +115,7 @@
 
 					a {
 						display: block;
-						min-width: 7.5rem;
+						min-width: 8.0rem;
 						height: 2.75rem;
 						line-height: 2.75rem;
 						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
