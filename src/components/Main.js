@@ -23,7 +23,7 @@ class Main extends React.Component {
       >
         <article
           id="about"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+          className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
@@ -40,7 +40,7 @@ class Main extends React.Component {
 
         <article
           id="schedule"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          className={`${this.props.article === 'schedule' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
@@ -60,7 +60,7 @@ class Main extends React.Component {
 
         <article
           id="history"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
+          className={`${this.props.article === 'history' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
