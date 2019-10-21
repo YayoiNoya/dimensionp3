@@ -159,7 +159,7 @@ class Main extends React.Component {
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <input type="submit" value="Entry" className="special" />
               </li>
               <li>
                 <input type="reset" value="Reset" />
