@@ -135,6 +135,39 @@ class Main extends React.Component {
           </ul>
           {close}
         </article>
+
+        <article
+          id="entry"
+          className={`${this.props.article === 'entry' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Entry</h2>
+          <form method="post" action="#">
+            <div className="field half first">
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div className="field half">
+              <label htmlFor="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div className="field">
+              <label htmlFor="note">Note</label>
+              <textarea name="note" id="note" rows="2"></textarea>
+            </div>
+            <ul className="actions">
+              <li>
+                <input type="submit" value="Send Message" className="special" />
+              </li>
+              <li>
+                <input type="reset" value="Reset" />
+              </li>
+            </ul>
+          </form>
+          {close}
+        </article>
       </div>
     )
   }

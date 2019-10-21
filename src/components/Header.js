@@ -9,8 +9,10 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>DimensionP3</h1>
-                <p>ボードゲームだって、TRPGだって、遊び倒せ。<br />
-                さあ、オフラインだけの遊びを。</p>
+                <p>
+                ボードゲームだって、TRPGだって、遊び倒せ。<br />
+                さあ、オフラインだけの遊びを。
+                </p>
             </div>
         </div>
         <nav>
@@ -21,7 +23,7 @@ const Header = (props) => (
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
             <ul className="entrybtn">
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Entry</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
             </ul>
         </nav>
     </header>
