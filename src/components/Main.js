@@ -83,18 +83,20 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true" action="/">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <label htmlFor="name">Name<abbr title="required">*</abbr></label>
+              <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <label htmlFor="email">Email<abbr title="required">*</abbr></label>
+              <input type="text" name="email" id="email" required />
             </div>
             <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <label htmlFor="message">Message<abbr title="required">*</abbr></label>
+              <textarea name="message" id="message" rows="5" required></textarea>
             </div>
             <ul className="actions">
               <li>
@@ -144,18 +146,20 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Entry</h2>
-          <form method="post" action="#">
+          <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true" action="/">
+          <input type="hidden" name="form-name" value="entry" />
+          <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <label htmlFor="name">Name<abbr title="required">*</abbr></label>
+              <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <label htmlFor="email">Email<abbr title="required">*</abbr></label>
+              <input type="text" name="email" id="email" required />
             </div>
             <div className="field">
               <label htmlFor="note">Note</label>
-              <textarea name="note" id="note" rows="2"></textarea>
+              <textarea name="note" id="note" rows="3"></textarea>
             </div>
             <ul className="actions">
               <li>
