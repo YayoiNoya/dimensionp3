@@ -70,11 +70,11 @@
 
 			.inner {
 				@include vendor('transition', (
-					'max-height #{_duration(intro)} ease',
-					'padding #{_duration(intro)} ease',
+					'max-height #{_duration(intro)} ease-in',
+					'padding #{_duration(intro)} ease-in-out',
 					'opacity #{_duration(article)} ease-in-out'
 				));
-				@include vendor('transition-delay', '0.25s');
+				@include vendor('transition-delay', '0.5s');
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;

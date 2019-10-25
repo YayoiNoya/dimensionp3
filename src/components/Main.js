@@ -83,7 +83,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true" action="/">
+          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks">
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -146,7 +146,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Entry</h2>
-          <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true" action="/">
+          <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks">
           <input type="hidden" name="form-name" value="entry" />
           <input type="hidden" name="bot-field" />
             <div className="field half first">
