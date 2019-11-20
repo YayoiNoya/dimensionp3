@@ -23,6 +23,19 @@
 					padding: 0 ($gutter * 1 * 0.5) 0 0;
 				}
 			}
+
+			&.third {
+				width: 33%;
+				float: left;
+				padding: 0 0 0 ($gutter * 1 * 0.33);
+
+				&.first {
+					padding: 0 ($gutter * 1 * 0.33) 0 0;
+				}
+				&.second {
+					padding: 0 ($gutter * 1 * 0.33) 0 ($gutter * 1 * 0.33);
+				}
+			}
 		}
 
 		> .actions {
@@ -70,7 +83,7 @@
 		letter-spacing: _font(letter-spacing);
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 
 	input[type="text"],
@@ -147,6 +160,7 @@
 
 	textarea {
 		padding: 0.75rem 1rem;
+		resize: none;
 	}
 
 	input[type="checkbox"],
@@ -165,11 +179,11 @@
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
-			font-size: 0.8rem;
+			font-size: 1.0rem;
 			font-weight: _font(weight);
 			margin: 0 0 (_size(element-margin) * 0.25) 0;
-			padding-left: (_size(element-height) * 0.6) + 1rem;
-			padding-right: 0.75rem;
+			padding-left: (_size(element-height) * 0.6) + 0.8rem;
+			padding-right: 3.5rem;
 			position: relative;
 
 			&:before {

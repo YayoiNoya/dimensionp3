@@ -17,13 +17,15 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('schedule')}}>Schedule</a></li>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('history')}}>History</a></li>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="#!" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
+                <li><a href="#!" onClick={() => {props.onOpenArticle('access')}}>Access</a></li>
+                <li><a href="#!" onClick={() => {props.onOpenArticle('history')}}>History</a></li>
+                <li><a href="#!" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
             <ul className="entrybtn">
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
+                {//<li><a href="#!">Coming Soon</a></li>
+                }
+                <li><a href="#!" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
             </ul>
         </nav>
     </header>

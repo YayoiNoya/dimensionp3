@@ -119,7 +119,7 @@
 						height: 2.75rem;
 						line-height: 2.75rem;
 						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
-						text-transform: uppercase;
+						text-transform: none;
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
 						border-bottom: 0;
@@ -137,6 +137,16 @@
 
 			.entrybtn {
 				@include vendor('display', 'grid');
+				border-color: gray;
+				color: gray;
+				a {
+					cursor: default;
+
+					&:hover {
+					}
+					&:active {
+					}
+				}
 			}
 
 			&.use-middle {
