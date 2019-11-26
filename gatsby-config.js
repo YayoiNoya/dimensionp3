@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "DimensionP3 - ゲーム企画合宿 | ToC",
+    title: "DimensionP3 - ゲーム合宿企画 | ToC",
     author: "Naga(ToC)",
     description: "ゲーム合宿企画のキャンペーンページ。シングルページアプリケーション（SPA）の実験用サイト"
   },

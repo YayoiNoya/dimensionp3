@@ -9,6 +9,64 @@ class Main extends React.Component {
     let close = (
       <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
     )
+/*
+    var StartYear = 1990;
+    var LastYear = 2000;
+
+    function Uru(Year){
+      var uru =
+      ( Year%400 === 0 ) ? true :
+      ( Year%100 === 0 ) ? false :
+      ( Year%4 === 0 ) ? true : false;
+      return uru;
+    }
+
+    function setSelectYear(){
+      for(var y=StartYear; y<LastYear; y++){
+        var select = document.entry.selectYear;
+        var option = select.appendChild( document.createElement('option') );
+        option.value = y;
+        option.text = y;
+      }
+      setSelectMonth();
+    }
+    setSelectYear();
+
+    function setSelectMonth(){
+      var select = document.entry.selectMonth;
+      while( select.options.length ){
+        select.removeChild( select.options[0] );
+      }
+      for(var m=1; m<=12; m++){
+        var option = select.appendChild( document.createElement('option') );
+        option.value = m;
+        option.text = m;
+      }
+      setSelectDate();
+    }
+
+    function setSelectDate(){
+      var Year =
+      document.entry.selectYear.options[
+      document.entry.selectYear.selectedIndex
+      ].value;
+      var Month =
+      document.entry.selectMonth.options[
+      document.entry.selectMonth.selectedIndex
+      ].value;
+      var days =
+      [31,( Uru(Year) ? 29 : 28 ),31,30,31,30,31,31,30,31,30,31];
+      var select = document.entry.selectDate;
+      while( select.options.length ){
+      select.removeChild( select.options[0] );
+      }
+      for(var d=1; d<=days[Month-1]; d++){
+      var option = select.appendChild( document.createElement('option') );
+      option.value = d;
+      option.text = d;
+      }
+    }
+*/
 
     return (
       <div
@@ -28,7 +86,48 @@ class Main extends React.Component {
             <img src={pic01} alt="" />
           </span>
           <p>
-            What's "DimensionP3"
+          20人規模のゲーム合宿をしたいので、一緒に遊んでくれる仲間を探しています。<br />
+          私たちのちょっとした野心にお付き合いくださると、とても嬉しいです。
+          </p>
+          <p>
+            「大人になった今のほうが自由なはずなのに、泊まり込みで遊び倒すみたいな体験が小学生の時より少ない。」
+            という呟きから、本企画が動き出しました。<br />
+            合宿所を貸し切って、友達と、またそこでできた新たな友達と、好きなゲームで盛り上がる。<br />
+            そして、それを定期開催する。<br />
+            ゲームの種類に制限はありません。<br />
+            【TVゲーム】でも【ボードゲーム】でも【TRPG】でも、なんでもOKです。<br />
+            各々が「やりたい！」と思ったものを提案でき、参加することができます。<br />
+            私たちはこれを「DimensionP3（ディメンジョンピースリー）」というグループとして、緩いつながりで長く続けていきたいと考えています。
+          </p>
+          <p>
+            そこでお願いがあります。<br />
+            泊まり込みで遊び、楽しみ、盛り上がるプレイヤーになりませんか？
+          </p>
+          <p>
+            わたくしNaga（Twitter：<a href="https://twitter.com/NagaYaorochi">@NagaYaorochi</a>）に加え、
+            過去に十数人規模のTRPG合宿を個人で企画した実績のあるちゃこ氏（Twitter：<a href="https://twitter.com/moco56">@moco56</a>）
+            との共同主催という形で、より多くのつながりができることを保証いたします。<br />
+            「どんな人が参加するかわからなくて不安...」という方もご安心ください。<br />
+            初回の参加条件は以下のようにしてあります。<br /><br />
+            <ul>
+              <li>主催者いずれかの知人</li>
+              <li>高専もしくは技大の在籍経験者</li>
+              <li>主催者と共通の知人がいる人（友達の友達）</li>
+            </ul>
+            要するに、共通の属性をお持ちの方ということになります。
+          </p>
+          <p>
+            定期開催イベントにおける初回メンバーはとても重要な存在です。<br />
+            次回以降の雰囲気を大きく決める要素になりますし、初回ならではの「はじめまして」感を体験できることでしょう。<br />
+            それは後々強いつながりを生むことになるかもしれません。
+          </p>
+          <p>
+            参加希望の方はEntryページの参加フォームをご記入の上、「ENTRY」ボタンより送信をお願いいたします。<br />
+            ぜひぜひご参加ください！<br />
+          </p>
+          <p>
+            Welcome to "DimensionP3" !<br />
+            Get Ready !
           </p>
           {close}
         </article>
@@ -168,15 +267,15 @@ class Main extends React.Component {
 
             <div className="field third first">
               <label htmlFor="year">生年月日<abbr title="required">*</abbr></label>
-              <select name="year" id="select_year"></select><div align="right">年</div>
+              <select name="selectYear" id="selectYear"></select><div align="right">年</div>
             </div>
             <div className="field third second">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="month" id="select_month"></select><div align="right">月</div>
+              <select name="selectMonth" id="selectMonth"></select><div align="right">月</div>
             </div>
             <div className="field third">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="day" id="select_day"></select><div align="right">日</div>
+              <select name="selectDate" id="selectDate"></select><div align="right">日</div>
             </div>
 
             <div className="field">
