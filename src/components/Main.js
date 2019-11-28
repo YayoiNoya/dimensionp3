@@ -95,7 +95,7 @@ class Main extends React.Component {
             合宿所を貸し切って、友達と、またそこでできた新たな友達と、好きなゲームで盛り上がる。<br />
             そして、それを定期開催する。<br />
             ゲームの種類に制限はありません。<br />
-            【TVゲーム】でも【ボードゲーム】でも【TRPG】でも、なんでもOKです。<br />
+            TVゲームでも、ボードゲームでも、TRPGでも、なんでもOKです。<br />
             各々が「やりたい！」と思ったものを提案でき、参加することができます。<br />
             私たちはこれを「DimensionP3（ディメンジョンピースリー）」というグループとして、緩いつながりで長く続けていきたいと考えています。
           </p>
@@ -104,8 +104,8 @@ class Main extends React.Component {
             泊まり込みで遊び、楽しみ、盛り上がるプレイヤーになりませんか？
           </p>
           <p>
-            わたくしNaga（Twitter：<a href="https://twitter.com/NagaYaorochi">@NagaYaorochi</a>）に加え、
-            過去に十数人規模のTRPG合宿を個人で企画した実績のあるちゃこ氏（Twitter：<a href="https://twitter.com/moco56">@moco56</a>）
+            わたくしNaga（<a href="https://twitter.com/NagaYaorochi">@NagaYaorochi</a>）に加え、
+            過去に十数人規模のTRPG合宿を個人で企画した実績のあるちゃこ氏（<a href="https://twitter.com/moco56">@moco56</a>）
             との共同主催という形で、より多くのつながりができることを保証いたします。<br />
             「どんな人が参加するかわからなくて不安...」という方もご安心ください。<br />
             初回の参加条件は以下のようにしてあります。<br /><br />
@@ -122,12 +122,22 @@ class Main extends React.Component {
             それは後々強いつながりを生むことになるかもしれません。
           </p>
           <p>
+            エントリー受付は【５月１日】から行います。<br />
+            その間に何で遊びたいか考えておくと、ワクワクするかもしれまんせん。<br />
+            続報をお待ちください。
+            {/*
             参加希望の方はEntryページの参加フォームをご記入の上、「ENTRY」ボタンより送信をお願いいたします。<br />
             ぜひぜひご参加ください！<br />
+            */
+            }
           </p>
           <p>
+            Coming Soon...
+            {/*
             Welcome to "DimensionP3" !<br />
             Get Ready !
+            */
+            }
           </p>
           {close}
         </article>
@@ -166,6 +176,32 @@ class Main extends React.Component {
           <p>
             開催企画一覧
           </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://twitter.com/NagaYaorochi"
+                className="icon fa-twitter"
+              >
+                <span className="label">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#!"
+                className="icon fa-instagram"
+              >
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#!"
+                className="icon fa-facebook"
+              >
+                <span className="label">Facebook</span>
+              </a>
+            </li>
+          </ul>
           {close}
         </article>
 
@@ -177,7 +213,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks">
+          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-contact">
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -205,34 +241,6 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
-          <ul className="icons">
-            <li>
-              <a
-                href="https://twitter.com/NagaYaorochi"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="#!" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#!" className="icon fa-instagram">
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/YayoiNoya/dimensionp3"
-                className="icon fa-github"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-          </ul>
           {close}
         </article>
 
@@ -244,7 +252,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Entry</h2>
-          <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks">
+          <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-entry">
           <input type="hidden" name="form-name" value="entry" />
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -297,7 +305,7 @@ class Main extends React.Component {
             </div>
 
             <div className="field">
-              <label htmlFor="event">合宿中にやりたいこと（ゲーム名など）があれば自由にお書きください。</label>
+              <label htmlFor="event">合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
               <input type="text" name="event" id="event" />
             </div>
 

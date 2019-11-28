@@ -10,13 +10,13 @@ const Header = (props) => (
             <div className="inner">
                 <h1>DimensionP3</h1>
                 <p>
-                ボードゲームだって、TRPGだって、遊び倒せ。<br />
+                Playground. Players. Products.<br />
                 さあ、オフラインだけの遊びを。
                 </p>
             </div>
         </div>
         <nav>
-            <ul>
+            <ul className="navbtn">
                 <li><a href="#!" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
                 <li><a href="#!" onClick={() => {props.onOpenArticle('access')}}>Access</a></li>
                 <li><a href="#!" onClick={() => {props.onOpenArticle('history')}}>History</a></li>
