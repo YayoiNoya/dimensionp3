@@ -81,10 +81,12 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
+          <h1 className="major">About</h1>
+          {/*
           <span className="image main">
             <img src={pic01} alt="" />
           </span>
+          */}
           <p>
           20人規模のゲーム合宿をしたいので、一緒に遊んでくれる仲間を探しています。<br />
           私たちのちょっとした野心にお付き合いくださると、とても嬉しいです。
@@ -149,10 +151,12 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Access</h2>
+          <h1 className="major">Access</h1>
+          {/*
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
+          */}
           <p>
             開催日：
           </p>
@@ -169,10 +173,12 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">History</h2>
+          <h1 className="major">History</h1>
+          {/*
           <span className="image main">
             <img src={pic03} alt="" />
           </span>
+          */}
           <p>
             開催企画一覧
           </p>
@@ -212,7 +218,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Contact</h2>
+          <h1 className="major">Contact</h1>
           <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-contact">
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
@@ -251,7 +257,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Entry</h2>
+          <h1 className="major">Entry</h1>
           <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-entry">
           <input type="hidden" name="form-name" value="entry" />
           <input type="hidden" name="bot-field" />
