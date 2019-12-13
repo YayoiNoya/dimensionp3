@@ -11,7 +11,7 @@ const Header = (props) => (
                 <h1>DimensionP3</h1>
                 <p>
                 Playground. Players. Products.<br />
-                さあ、オフラインだけの遊びを。
+                Let's play something !
                 </p>
             </div>
         </div>
