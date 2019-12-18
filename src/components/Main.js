@@ -5,70 +5,53 @@ import React from 'react'
 //import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isUru: false,
+      startYear: 1990,
+      endYear: 1999,
+      selectMonth: 1,
+    };
+  }
+
+  uru(year) {
+    const u =
+      ( year.target.value%400 === 0 ) ? true :
+      ( year.target.value%100 === 0 ) ? false :
+      ( year.target.value%4 === 0 ) ? true : false;
+    this.setState({
+      isUru: u,
+    });
+  }
+
+  setSelectMonth(month) {
+    this.setState({
+      selectMonth: month.target.value,
+    });
+  }
+
   render() {
     let close = (
       <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
     );
-/*
-    var StartYear = 1990;
-    var LastYear = 2000;
 
-    const Uru = (Year) => {
-      var uru =
-      ( Year%400 === 0 ) ? true :
-      ( Year%100 === 0 ) ? false :
-      ( Year%4 === 0 ) ? true : false;
-      return uru;
+    const yearsOption = [];
+    for (let y = this.state.startYear; y <= this.state.endYear; y++) {
+      yearsOption.push(<option value={y}>{y}</option>);
     }
 
-    const setSelectYear = () => {
-      for(var y=StartYear; y<LastYear; y++){
-        var form = document.forms.entry;
-        var select = form.selectYear;
-        var option = select.appendChild(document.createElement('option'));
-        option.value = y;
-        option.text = y;
-      }
-      setSelectMonth();
-    }
-    setSelectYear();
-
-    const setSelectMonth = () => {
-      var form = document.forms.entry;
-      var select = form.selectMonth;
-      while(select.options.length){
-        select.removeChild(select.options[0]);
-      }
-      for(let m=1; m<=12; m++){
-        var option = select.appendChild(document.createElement('option'));
-        option.value = m;
-        option.text = m;
-      }
-      setSelectDate();
+    const monthsOption = [];
+    for (let m = 1; m <= 12; m++) {
+      monthsOption.push(<option value={m}>{m}</option>);
     }
 
-    const setSelectDate = () => {
-      let Year =
-      document.forms.entry.selectYear.options[
-      document.forms.entry.selectYear.selectedIndex
-      ].value;
-      let Month =
-      document.forms.entry.selectMonth.options[
-      document.forms.entry.selectMonth.selectedIndex
-      ].value;
-      let days =
-      [31,( Uru(Year) ? 29 : 28 ),31,30,31,30,31,31,30,31,30,31];
-      let select = document.forms.entry.selectDate;
-      while( select.options.length ){
-      select.removeChild( select.options[0] );
-      }
-      for(let d=1; d<=days[Month-1]; d++){
-      let option = select.appendChild(document.createElement('option'));
-      option.value = d;
-      option.text = d;
-      }
+    const days = [31,(this.state.isUru?29:28),31,30,31,30,31,31,30,31,30,31];
+    const dateOption = [];
+    for (let d = 1; d <= days[this.state.selectMonth-1]; d++) {
+      dateOption.push(<option value={d}>{d}</option>);
     }
-*/
+
     return (
       <div
         ref={this.props.setWrapperRef}
@@ -282,15 +265,21 @@ class Main extends React.Component {
 
             <div className="field third first">
               <label htmlFor="year">生年月日<abbr title="required">*</abbr></label>
-              <select name="selectYear" id="selectYear" onChange="setSelectMonth()"></select><div align="right">年</div>
+              <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}}>
+                {yearsOption}
+              </select><div align="right">年</div>
             </div>
             <div className="field third second">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="selectMonth" id="selectMonth" onChange="setSelectDate()"></select><div align="right">月</div>
+              <select name="selectMonth" id="selectMonth" onChange={(event) => {this.setSelectMonth(event)}}>
+                {monthsOption}
+              </select><div align="right">月</div>
             </div>
             <div className="field third">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="selectDate" id="selectDate"></select><div align="right">日</div>
+              <select name="selectDate" id="selectDate">
+                {dateOption}
+              </select><div align="right">日</div>
             </div>
 
             <div className="field">
