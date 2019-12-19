@@ -90,7 +90,7 @@ class Main extends React.Component {
             泊まり込みで遊び、楽しみ、盛り上がるプレイヤーになりませんか？
           </p>
           <p>
-            わたくしNaga（<a href="https://twitter.com/NagaYaorochi">@NagaYaorochi</a>）に加え、
+            わたくしNaga（<a href="https://twitter.com/NagaYayoi">@NagaYayoi</a>）に加え、
             過去に十数人規模のTRPG合宿を個人で企画した実績のあるちゃこ氏（<a href="https://twitter.com/moco56">@moco56</a>）
             との共同主催という形で、より多くのつながりができることを保証いたします。<br />
             「どんな人が参加するかわからなくて不安...」という方もご安心ください。<br />
@@ -264,7 +264,7 @@ class Main extends React.Component {
             </div>
 
             <div className="field third first">
-              <label htmlFor="year">生年月日<abbr title="required">*</abbr></label>
+              <label htmlFor="birth">生年月日<abbr title="required">*</abbr></label>
               <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}}>
                 {yearsOption}
               </select><div align="right">年</div>
