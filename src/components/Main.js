@@ -309,6 +309,13 @@ class Main extends React.Component {
               <label htmlFor="note">備考</label>
               <textarea name="note" id="note" rows="3"></textarea>
             </div>
+
+          <div className="field">
+            <label htmlFor="agreement">以下の注意事項をご理解の上、「同意する」にチェックをお願いいたします。<abbr title="required">*</abbr></label>
+            <input type="checkbox" name="agreement" id="agreement_check" value="check" required />
+            <label htmlFor="agreement_check">同意する</label>
+          </div>
+
             <ul className="actions">
               <li>
                 <input type="submit" value="Entry" className="special" />
