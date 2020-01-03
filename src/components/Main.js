@@ -142,7 +142,7 @@ class Main extends React.Component {
           </span>
           */}
           <p>
-            開催日：
+            開催日：2020年9月19日(土)～22日(火)のうちの二泊三日
           </p>
           <p>
             開催場所：
@@ -169,7 +169,7 @@ class Main extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/NagaYaorochi"
+                href="https://twitter.com/NagaYayoi"
                 className="icon fa-twitter"
               >
                 <span className="label">Twitter</span>
@@ -312,6 +312,10 @@ class Main extends React.Component {
 
           <div className="field">
             <label htmlFor="agreement">以下の注意事項をご理解の上、「同意する」にチェックをお願いいたします。<abbr title="required">*</abbr></label>
+            <p>【注意事項】</p>
+            <p>
+              （注意事項一覧）
+            </p>
             <input type="checkbox" name="agreement" id="agreement_check" value="check" required />
             <label htmlFor="agreement_check">同意する</label>
           </div>
@@ -336,6 +340,7 @@ Main.propTypes = {
   route: PropTypes.object,
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
+  onOpenArticle: PropTypes.func,
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,

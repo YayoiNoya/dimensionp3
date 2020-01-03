@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "DimensionP3 - ゲーム合宿企画 | ToC",
     author: "Naga(ToC)",
-    description: "ゲーム合宿企画のキャンペーンページ。シングルページアプリケーション（SPA）の実験用サイト"
+    description: "ゲーム合宿企画のキャンペーンページ。SPA実験用サイト"
   },
   plugins: [
     'gatsby-plugin-react-helmet',

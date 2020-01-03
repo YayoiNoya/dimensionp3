@@ -37,7 +37,7 @@ const PrivacyPolicy = () => (
         <ul>
             <li>代表：Naga</li>
             <li>メールアドレス：</li>
-            <li>Twitter：<a href="https://twitter.com/NagaYaorochi">@NagaYaorochi</a></li>
+            <li>Twitter：<a href="https://twitter.com/NagaYayoi">@NagaYayoi</a></li>
         </ul>
     </p><br />
     <p>制定日：2020年4月1日</p>
