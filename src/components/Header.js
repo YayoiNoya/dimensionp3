@@ -10,7 +10,7 @@ const Header = (props) => (
             <div className="inner">
                 <h1>DimensionP3</h1>
                 <p>
-                Playground. Players. Products.<br />
+                ゲーム合宿企画<br />
                 Let's play something !
                 </p>
             </div>

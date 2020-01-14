@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-//import pic01 from '../images/pic01.jpg'
 //import pic02 from '../images/pic02.jpg'
 //import pic03 from '../images/pic03.jpg'
 
@@ -66,13 +65,8 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h1 className="major">About</h1>
-          {/*
-          <span className="image main">
-            <img src={pic01} alt="" />
-          </span>
-          */}
           <p>
-          20人規模のゲーム合宿をしたいので、一緒に遊んでくれる仲間を探しています。<br />
+          10～20人規模のゲーム合宿をしたいので、一緒に遊んでくれる仲間を探しています。<br />
           私たちのちょっとした野心にお付き合いくださると、とても嬉しいです。
           </p>
           <p>
@@ -108,7 +102,7 @@ class Main extends React.Component {
             それは後々強いつながりを生むことになるかもしれません。
           </p>
           <p>
-            エントリー受付は【５月１日】から行います。<br />
+            エントリー受付は【2020年5月1日】から行います。<br />
             その間に何で遊びたいか考えておくと、ワクワクするかもしれまんせん。<br />
             続報をお待ちください。
             {/*
@@ -244,27 +238,31 @@ class Main extends React.Component {
           <h1 className="major">Entry</h1>
           <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-entry">
           <input type="hidden" name="form-name" value="entry" />
+          <p>
+            <abbr title="required">*</abbr> は必須項目です。<br />
+            必須項目をご記入の上、一番下の「<b>ENTRY</b>」ボタンを押してください。
+          </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">氏名<abbr title="required">*</abbr></label>
+              <label htmlFor="name">【氏名】<abbr title="required">*</abbr></label>
               <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="ruby">よみがな<abbr title="required">*</abbr></label>
+              <label htmlFor="ruby">【よみがな】<abbr title="required">*</abbr></label>
               <input type="text" name="ruby" id="ruby" required />
             </div>
 
             <div className="field half first">
-              <label htmlFor="hn">ハンドルネーム<abbr title="required">*</abbr></label>
+              <label htmlFor="hn">【ハンドルネーム】<abbr title="required">*</abbr></label>
               <input type="text" name="hn" id="hn" required />
             </div>
             <div className="field half">
-              <label htmlFor="email">Email<abbr title="required">*</abbr></label>
+              <label htmlFor="email">【<b>Email</b>】<abbr title="required">*</abbr></label>
               <input type="text" name="email" id="email" required />
             </div>
 
             <div className="field third first">
-              <label htmlFor="birth">生年月日<abbr title="required">*</abbr></label>
+              <label htmlFor="birth">【生年月日】<abbr title="required">*</abbr></label>
               <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}}>
                 {yearsOption}
               </select><div align="right">年</div>
@@ -283,15 +281,16 @@ class Main extends React.Component {
             </div>
 
             <div className="field">
-              <label htmlFor="sex">性別<abbr title="required">*</abbr></label>
+              <label htmlFor="sex">【性別】<abbr title="required">*</abbr></label>
               <input type="radio" name="sex" id="male" value="male" required />
               <label htmlFor="male">男</label>
               <input type="radio" name="sex" id="female" value="female" required />
               <label htmlFor="female">女</label>
             </div>
+            <br />
 
             <div className="field">
-              <label htmlFor="requirement">該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
+              <label htmlFor="requirement">【該当する参加条件にチェックを入れてください。】<abbr title="required">*</abbr></label>
               <input type="radio" name="requirement" id="requirement1" value="1" required />
               <label htmlFor="requirement1">主催者いずれかの知人</label><br />
               <input type="radio" name="requirement" id="requirement2" value="2" required />
@@ -299,26 +298,60 @@ class Main extends React.Component {
               <input type="radio" name="requirement" id="requirement3" value="3" required />
               <label htmlFor="requirement3">主催者と共通の知人が参加予定（所謂、友達の友達）</label><br />
             </div>
+            <br />
 
             <div className="field">
-              <label htmlFor="event">合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
+              <label htmlFor="event">【合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。】</label>
               <input type="text" name="event" id="event" />
             </div>
+            <br />
 
             <div className="field">
-              <label htmlFor="note">備考</label>
+              <label htmlFor="note">【備考】</label>
               <textarea name="note" id="note" rows="3"></textarea>
             </div>
+            <br />
 
           <div className="field">
-            <label htmlFor="agreement">以下の注意事項をご理解の上、「同意する」にチェックをお願いいたします。<abbr title="required">*</abbr></label>
-            <p>【注意事項】</p>
+            <label htmlFor="agreement">【以下の禁止行為・持込禁止物をお読みください。】<abbr title="required">*</abbr></label>
             <p>
-              （注意事項一覧）
+              ◆禁止行為◆<br />
+              　本ゲーム合宿では、以下の行為を禁止します。違反した場合は次回からの参加をお断りする場合があります。
+              <ol>
+                <li>他の参加者や近隣に迷惑のかかる行為
+                  <ul>
+                    <li>会場施設を乱暴に扱うこと</li>
+                    <li>著しい騒音を出すこと</li>
+                    <li>コスプレをすること</li>
+                    <li>飲酒すること　など</li>
+                  </ul>
+                </li>
+                <li>法令に違反する行為
+                  <ul>
+                    <li>会場近隣で路上駐車すること　など</li>
+                  </ul>
+                </li>
+                <li>悪質な勧誘行為</li><br />
+                <li>その他、主催者・警察署・消防署の指示に従わない行為</li>
+              </ol>
+              ◆持込禁止物◆<br />
+              　本ゲーム合宿では、以下の物品の持ち込みを禁止します。違反した場合は次回からの参加をお断りする場合があります。
+            <ol>
+              <li>法令で所持・携帯が禁止、あるいは犯罪として摘発される可能性が高いもの
+                <ul>
+                  <li>消防法での危険物とされるもの（燃料・火薬・発火物など）</li>
+                  <li>銃刀法での規制対象となっている銃砲・刀剣類（模造品を含む）　など</li>
+                </ul>
+              </li>
+              <li>動物・ペット</li><br />
+              <li>その他、主催者・警察署・消防署が危険と判断したもの</li>
+            </ol>
+            以上をご理解の上、下の「同意する」にチェックをお願いします。
             </p>
             <input type="checkbox" name="agreement" id="agreement_check" value="check" required />
             <label htmlFor="agreement_check">同意する</label>
           </div>
+          <br />
 
             <ul className="actions">
               <li>

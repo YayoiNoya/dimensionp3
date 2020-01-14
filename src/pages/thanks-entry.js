@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 const EntryThanksPage = () => (
   <Layout>
-    <h1>エントリーありがとうございます！</h1>
+    <h1>エントリーを受け付けました。</h1>
     <p>
         詳細については後日連絡いたします。
     </p>

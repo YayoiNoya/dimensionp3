@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
 const PrivacyPolicy = () => (
-  <Layout>
+	<Layout>
     <h1>プライバシーポリシー</h1>
     <p>
         DimensionP3（以下、本サイト）における個人情報について、以下のように個人情報の保護に努め、
