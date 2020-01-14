@@ -244,25 +244,25 @@ class Main extends React.Component {
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">【氏名】<abbr title="required">*</abbr></label>
+              <label htmlFor="name">氏名<abbr title="required">*</abbr></label>
               <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="ruby">【よみがな】<abbr title="required">*</abbr></label>
+              <label htmlFor="ruby">よみがな<abbr title="required">*</abbr></label>
               <input type="text" name="ruby" id="ruby" required />
             </div>
 
             <div className="field half first">
-              <label htmlFor="hn">【ハンドルネーム】<abbr title="required">*</abbr></label>
+              <label htmlFor="hn">ハンドルネーム<abbr title="required">*</abbr></label>
               <input type="text" name="hn" id="hn" required />
             </div>
             <div className="field half">
-              <label htmlFor="email">【<b>Email</b>】<abbr title="required">*</abbr></label>
+              <label htmlFor="email"><b>Email</b><abbr title="required">*</abbr></label>
               <input type="text" name="email" id="email" required />
             </div>
 
             <div className="field third first">
-              <label htmlFor="birth">【生年月日】<abbr title="required">*</abbr></label>
+              <label htmlFor="birth">生年月日<abbr title="required">*</abbr></label>
               <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}}>
                 {yearsOption}
               </select><div align="right">年</div>
@@ -281,7 +281,7 @@ class Main extends React.Component {
             </div>
 
             <div className="field">
-              <label htmlFor="sex">【性別】<abbr title="required">*</abbr></label>
+              <label htmlFor="sex">性別<abbr title="required">*</abbr></label>
               <input type="radio" name="sex" id="male" value="male" required />
               <label htmlFor="male">男</label>
               <input type="radio" name="sex" id="female" value="female" required />
@@ -290,7 +290,7 @@ class Main extends React.Component {
             <br />
 
             <div className="field">
-              <label htmlFor="requirement">【該当する参加条件にチェックを入れてください。】<abbr title="required">*</abbr></label>
+              <label htmlFor="requirement">該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
               <input type="radio" name="requirement" id="requirement1" value="1" required />
               <label htmlFor="requirement1">主催者いずれかの知人</label><br />
               <input type="radio" name="requirement" id="requirement2" value="2" required />
@@ -301,19 +301,19 @@ class Main extends React.Component {
             <br />
 
             <div className="field">
-              <label htmlFor="event">【合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。】</label>
+              <label htmlFor="event">合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
               <input type="text" name="event" id="event" />
             </div>
             <br />
 
             <div className="field">
-              <label htmlFor="note">【備考】</label>
+              <label htmlFor="note">備考</label>
               <textarea name="note" id="note" rows="3"></textarea>
             </div>
             <br />
 
           <div className="field">
-            <label htmlFor="agreement">【以下の禁止行為・持込禁止物をお読みください。】<abbr title="required">*</abbr></label>
+            <label htmlFor="agreement">以下の禁止行為・持込禁止物をお読みください。<abbr title="required">*</abbr></label>
             <p>
               ◆禁止行為◆<br />
               　本ゲーム合宿では、以下の行為を禁止します。違反した場合は次回からの参加をお断りする場合があります。
