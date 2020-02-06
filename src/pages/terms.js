@@ -143,7 +143,7 @@ const Terms = () => (
     <br />
     <div align="right">以上</div>
 
-    <p>制定日：2020年〇月〇日</p>
+    <p>制定日：2020年4月1日</p>
     <Link to="/">トップページへ</Link>
   </Layout>
 )

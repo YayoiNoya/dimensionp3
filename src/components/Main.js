@@ -102,7 +102,7 @@ class Main extends React.Component {
             それは後々強いつながりを生むことになるかもしれません。
           </p>
           <p>
-            エントリー受付は【2020年5月1日】から行います。<br />
+            参加申請受付は【2020年5月1日】から行います。<br />
             その間に何で遊びたいか考えておくと、ワクワクするかもしれまんせん。<br />
             続報をお待ちください。
             {/*
@@ -136,7 +136,7 @@ class Main extends React.Component {
           </span>
           */}
           <p>
-            開催日：2020年9月19日(土)～22日(火)のうちの二泊三日
+            開催日：2020年9月19日(土)～21日(月)（二泊三日）
           </p>
           <p>
             開催場所：
@@ -158,7 +158,13 @@ class Main extends React.Component {
           </span>
           */}
           <p>
-            開催企画一覧
+            2019年<br />
+            　10月 │ゲーム合宿企画立案。企画グループ「DimensionP3」発足。<br />
+          </p>
+          <p>
+            2020年<br />
+            　&ensp;4月 │Webサイト「DomensionP3」公開。<br />
+            　&ensp;5月 │第一回ゲーム合宿企画参加者募集開始。
           </p>
           <ul className="icons">
             <li>
@@ -199,6 +205,12 @@ class Main extends React.Component {
           <h1 className="major">Contact</h1>
           <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-contact">
           <input type="hidden" name="form-name" value="contact" />
+          <p>
+            お問い合わせ、ご質問等は本フォームからお願いいたします。<br />
+            <br />
+            <abbr title="required">*</abbr> は必須項目です。<br />
+            必須項目をご記入の上、一番下の「<b>SEND MESSAGE</b>」ボタンを押してください。
+          </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
               <label htmlFor="name">氏名<abbr title="required">*</abbr></label>
@@ -239,6 +251,8 @@ class Main extends React.Component {
           <form name="entry" method="post" data-netlify-honeypot="bot-field" data-netlify="true"  action="thanks-entry">
           <input type="hidden" name="form-name" value="entry" />
           <p>
+            参加申請は本フォームからお願いいたします。<br />
+            <br />
             <abbr title="required">*</abbr> は必須項目です。<br />
             必須項目をご記入の上、一番下の「<b>ENTRY</b>」ボタンを押してください。
           </p>

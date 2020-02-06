@@ -39,7 +39,6 @@ const PrivacyPolicy = () => (
       トップページの【Contact】もしくは以下の連絡先にてお願いいたします。
       <ul>
         <li>代表：Naga</li>
-        <li>メールアドレス：</li>
         <li>Twitter：<a href="https://twitter.com/NagaYayoi">@NagaYayoi</a></li>
       </ul>
     </p><br />
