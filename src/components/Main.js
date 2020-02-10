@@ -160,12 +160,12 @@ class Main extends React.Component {
           */}
           <p>
             2019年<br />
-            　10月 │ゲーム合宿企画グループ「DimensionP3」発足。<br />
+            　10月 │ゲーム合宿企画グループ「DimensionP3」発足<br />
           </p>
           <p>
             2020年<br />
-              　&ensp;4月 │Webサイト「DimensionP3」公開。<br />
-              　&ensp;5月 │第１回ゲーム合宿参加者募集開始。<br />
+              　&ensp;4月 │Webサイト「DimensionP3」公開<br />
+              　&ensp;5月 │第１回参加者募集開始<br />
           </p>
           <ul className="icons">
             <li>
