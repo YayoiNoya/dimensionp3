@@ -136,10 +136,11 @@ class Main extends React.Component {
           </span>
           */}
           <p>
+            ◆第１回◆<br />
             開催日：2020年9月19日(土)～21日(月)（二泊三日）
           </p>
           <p>
-            開催場所：
+            開催場所：<a href="https://www.airbnb.jp/rooms/38938296?s=67&shared_item_type=1&virality_entry_point=1">リンク</a>
           </p>
           {close}
         </article>
@@ -159,12 +160,12 @@ class Main extends React.Component {
           */}
           <p>
             2019年<br />
-            　10月 │ゲーム合宿企画立案。企画グループ「DimensionP3」発足。<br />
+            　10月 │ゲーム合宿企画グループ「DimensionP3」発足。<br />
           </p>
           <p>
             2020年<br />
-            　&ensp;4月 │Webサイト「DomensionP3」公開。<br />
-            　&ensp;5月 │第一回ゲーム合宿企画参加者募集開始。
+              　&ensp;4月 │Webサイト「DimensionP3」公開。<br />
+              　&ensp;5月 │第１回ゲーム合宿参加者募集開始。<br />
           </p>
           <ul className="icons">
             <li>
@@ -181,14 +182,6 @@ class Main extends React.Component {
                 className="icon fa-instagram"
               >
                 <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#!"
-                className="icon fa-facebook"
-              >
-                <span className="label">Facebook</span>
               </a>
             </li>
           </ul>
