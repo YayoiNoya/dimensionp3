@@ -35,6 +35,14 @@ class Main extends React.Component {
       <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
     );
 
+    let termsCheck = (
+      <a href="javascript:void(0)" onClick={() => {
+        window.open('/terms', '_blank');
+        document.getElementById("terms_check").checked = true}}>
+          参加規約
+      </a>
+    );
+
     const yearsOption = [];
     for (let y = this.state.startYear; y <= this.state.endYear; y++) {
       yearsOption.push(<option value={y}>{y}</option>);
@@ -70,24 +78,24 @@ class Main extends React.Component {
           私たちのちょっとした野心にお付き合いくださると、とても嬉しいです。
           </p>
           <p>
-            「大人になった今のほうが自由なはずなのに、泊まり込みで遊び倒すみたいな体験が小学生の時より少ない。」
+            「大人になった今のほうが自由なはずなのに、泊まりこみで遊び倒すみたいな体験が小学生の時より少ない。」
             という呟きから、本企画が動き出しました。<br />
-            合宿所を貸し切って、友達と、またそこでできた新たな友達と、好きなゲームで盛り上がる。<br />
-            そして、それを定期開催する。<br />
+            合宿所を貸し切って、友達と、またそこでできた新たな友達と、好きなゲームをする。<br />
+            そして、それを定期開催する。それだけです。<br />
             ゲームの種類に制限はありません。<br />
             TVゲームでも、ボードゲームでも、TRPGでも、なんでもOKです。<br />
             各々が「やりたい！」と思ったものを提案でき、参加することができます。<br />
             私たちはこれを「DimensionP3（ディメンジョンピースリー）」というグループとして、緩いつながりで長く続けていきたいと考えています。
           </p>
           <p>
-            そこでお願いがあります。<br />
-            泊まり込みで遊び、楽しみ、盛り上がるプレイヤーになりませんか？
+            そこであなたにお願いがあります。<br />
+            私たちと一緒に、最初の「プレイヤー」になってくれませんか？
           </p>
           <p>
-            わたくしNaga（<a href="https://twitter.com/NagaYayoi">@NagaYayoi</a>）に加え、
+            わたくしNaga（<a href="https://twitter.com/leanbody12">@leanbody12</a>）に加え、
             過去に十数人規模のTRPG合宿を個人で企画した実績のあるちゃこ氏（<a href="https://twitter.com/moco56">@moco56</a>）
             との共同主催という形で、より多くのつながりができることを保証いたします。<br />
-            「どんな人が参加するかわからなくて不安...」という方もご安心ください。<br />
+            「どんな人が参加するかわからなくて不安... 」という方もご安心ください。<br />
             初回の参加条件は以下のようにしてあります。<br /><br />
             <ul>
               <li>主催者いずれかの知人</li>
@@ -98,12 +106,12 @@ class Main extends React.Component {
           </p>
           <p>
             定期開催イベントにおける初回メンバーはとても重要な存在です。<br />
-            次回以降の雰囲気を大きく決める要素になりますし、初回ならではの「はじめまして」感を体験できることでしょう。<br />
-            それは後々強いつながりを生むことになるかもしれません。
+            次回以降の雰囲気を大きく決める要素になりますし、初回ならではの「はじめまして」感を体験できるはずです。<br />
+            それは後々、強いつながりを生むことになるでしょう。
           </p>
           <p>
             参加申請受付は【2020年5月1日】から行います。<br />
-            その間に何で遊びたいか考えておくと、ワクワクするかもしれまんせん。<br />
+            その間に何で遊びたいか考えておくと、ワクワクするかもしれません。<br />
             続報をお待ちください。
             {/*
             参加希望の方はEntryページの参加フォームをご記入の上、「ENTRY」ボタンより送信をお願いいたします。<br />
@@ -112,7 +120,6 @@ class Main extends React.Component {
             }
           </p>
           <p>
-            Coming Soon...
             {/*
             Welcome to "DimensionP3" !<br />
             Get Ready !
@@ -137,10 +144,9 @@ class Main extends React.Component {
           */}
           <p>
             ◆第１回◆<br />
-            開催日：2020年9月19日(土)～21日(月)（二泊三日）
-          </p>
-          <p>
-            開催場所：<a href="https://www.airbnb.jp/rooms/38938296?s=67&shared_item_type=1&virality_entry_point=1">リンク</a>
+            開催日：2020年9月19日(土)～21日(月)（二泊三日）<br />
+            開催場所：東京都葛飾区の宿泊施設（一棟貸切）<br />
+            （詳細は参加者にのみ通知）
           </p>
           {close}
         </article>
@@ -170,7 +176,7 @@ class Main extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/NagaYayoi"
+                href="https://twitter.com/leanbody12"
                 className="icon fa-twitter"
               >
                 <span className="label">Twitter</span>
@@ -179,9 +185,9 @@ class Main extends React.Component {
             <li>
               <a
                 href="#!"
-                className="icon fa-instagram"
+                className="icon fa-comment-o"
               >
-                <span className="label">Instagram</span>
+                <span className="label">LINE</span>
               </a>
             </li>
           </ul>
@@ -319,43 +325,39 @@ class Main extends React.Component {
             </div>
             <br />
 
+            <div className="field">
+              <label htmlFor="terms">以下のリンク先「参加規約」をご確認ください。<abbr title="required">*</abbr></label>
+              {termsCheck}<br /><br />
+              <input type="checkbox" name="terms_check" id="terms_check" value="terms_check" required />
+              <label htmlFor="terms_check">確認</label>
+            </div>
+            <br />
+
           <div className="field">
-            <label htmlFor="agreement">以下の禁止行為・持込禁止物をお読みください。<abbr title="required">*</abbr></label>
+            <label htmlFor="prohibition">以下の「禁止行為・持込禁止物」をお読みください。<abbr title="required">*</abbr></label>
             <p>
               ◆禁止行為◆<br />
               　本ゲーム合宿では、以下の行為を禁止します。違反した場合は次回からの参加をお断りする場合があります。
               <ol>
-                <li>他の参加者や近隣に迷惑のかかる行為
-                  <ul>
-                    <li>会場施設を乱暴に扱うこと</li>
-                    <li>著しい騒音を出すこと</li>
-                    <li>コスプレをすること</li>
-                    <li>飲酒すること　など</li>
-                  </ul>
-                </li>
-                <li>法令に違反する行為
-                  <ul>
-                    <li>会場近隣で路上駐車すること　など</li>
-                  </ul>
-                </li>
-                <li>悪質な勧誘行為</li><br />
+                <li>会場施設を乱暴に扱うこと</li>
+                <li>著しい騒音を出すこと</li>
+                <li>過度な飲酒</li>
+                <li>悪質な勧誘行為</li>
+                <li>コスプレをすること</li>
+                <li>法令に違反する行為</li>
                 <li>その他、主催者・警察署・消防署の指示に従わない行為</li>
               </ol>
               ◆持込禁止物◆<br />
               　本ゲーム合宿では、以下の物品の持ち込みを禁止します。違反した場合は次回からの参加をお断りする場合があります。
             <ol>
-              <li>法令で所持・携帯が禁止、あるいは犯罪として摘発される可能性が高いもの
-                <ul>
-                  <li>消防法での危険物とされるもの（燃料・火薬・発火物など）</li>
-                  <li>銃刀法での規制対象となっている銃砲・刀剣類（模造品を含む）　など</li>
-                </ul>
-              </li>
-              <li>動物・ペット</li><br />
+              <li>消防法での危険物とされるもの（燃料・火薬・発火物など）</li>
+              <li>銃刀法での規制対象となっている銃砲・刀剣類（模造品を含む）</li>
+              <li>動物・ペット</li>
               <li>その他、主催者・警察署・消防署が危険と判断したもの</li>
             </ol>
             以上をご理解の上、下の「同意する」にチェックをお願いします。
             </p>
-            <input type="checkbox" name="agreement" id="agreement_check" value="check" required />
+            <input type="checkbox" name="agreement_check" id="agreement_check" value="agreement_check" required />
             <label htmlFor="agreement_check">同意する</label>
           </div>
           <br />
