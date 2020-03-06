@@ -30,6 +30,10 @@ class Main extends React.Component {
     });
   }
 
+  undisabled() {
+    document.entry.termscheck.disabled = false;
+  }
+
   render() {
     let close = (
       <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
@@ -38,7 +42,7 @@ class Main extends React.Component {
     let termsCheck = (
       <a href="javascript:void(0)" onClick={() => {
         window.open('/terms', '_blank');
-        document.getElementById("terms_check").checked = true}}>
+        document.getElementById("termscheck").checked = true}}>
           参加規約
       </a>
     );
@@ -253,7 +257,7 @@ class Main extends React.Component {
             参加申請は本フォームからお願いいたします。<br />
             <br />
             <abbr title="required">*</abbr> は必須項目です。<br />
-            必須項目をご記入の上、一番下の「<b>ENTRY</b>」ボタンを押してください。
+            必須項目をご記入・ご確認の上、一番下の「<b>ENTRY</b>」ボタンを押してください。
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -326,10 +330,12 @@ class Main extends React.Component {
             <br />
 
             <div className="field">
-              <label htmlFor="terms">以下のリンク先「参加規約」をご確認ください。<abbr title="required">*</abbr></label>
+              <label htmlFor="terms">
+                以下のリンク先「参加規約」をご確認ください（新しいタブが開きます）。
+              <abbr title="required">*</abbr></label>
               {termsCheck}<br /><br />
-              <input type="checkbox" name="terms_check" id="terms_check" value="terms_check" required />
-              <label htmlFor="terms_check">確認</label>
+              <input type="checkbox" name="termscheck" id="termscheck" value="termscheck" required />
+              <label htmlFor="termscheck">確認</label>
             </div>
             <br />
 
@@ -357,14 +363,16 @@ class Main extends React.Component {
             </ol>
             以上をご理解の上、下の「同意する」にチェックをお願いします。
             </p>
-            <input type="checkbox" name="agreement_check" id="agreement_check" value="agreement_check" required />
-            <label htmlFor="agreement_check">同意する</label>
+            <input type="checkbox" name="agreementcheck" id="agreementcheck" value="agreementcheck" required />
+            <label htmlFor="agreementcheck">同意する</label>
           </div>
           <br />
 
             <ul className="actions">
               <li>
                 <input type="submit" value="Entry" className="special" />
+                {//<input type="submit" value="Entry" className="special" onClick={() => {this.undisabled()}} />
+                }
               </li>
               <li>
                 <input type="reset" value="Reset" />

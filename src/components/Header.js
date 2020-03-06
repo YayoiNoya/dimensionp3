@@ -11,7 +11,8 @@ const Header = (props) => (
                 <h1>DimensionP3</h1>
                 <p>
                 ゲーム合宿企画<br />
-                Let's play something !
+                Let's play something !<br />
+                《5月1日エントリー受付開始》
                 </p>
             </div>
         </div>
