@@ -11,8 +11,8 @@ const ContactThanksPage = () => (
     </p>
     <h2>送信元情報</h2>
     <p>
-      送信元：DimensionP3<br />
-      メールアドレス：dimensionp3@gmail.com<br />
+      送信元：Dimension P3<br />
+      メールアドレス：dimensionp3.game@gmail.com<br />
       件名：お問い合わせへのご回答
     </p>
     <Link to="/">トップページへ</Link>
