@@ -30,10 +30,6 @@ class Main extends React.Component {
     });
   }
 
-  undisabled() {
-    document.entry.termscheck.disabled = false;
-  }
-
   render() {
     let close = (
       <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
@@ -177,6 +173,7 @@ class Main extends React.Component {
               　&ensp;4月 │Webサイト「DimensionP3」公開<br />
               　&ensp;5月 │第１回参加者募集開始<br />
           </p>
+          {/*
           <ul className="icons">
             <li>
               <a
@@ -189,12 +186,13 @@ class Main extends React.Component {
             <li>
               <a
                 href="#!"
-                className="icon fa-comment-o"
+                className="icon fa-instagram"
               >
-                <span className="label">LINE</span>
+                <span className="label">Instagram</span>
               </a>
             </li>
           </ul>
+          */}
           {close}
         </article>
 
@@ -308,11 +306,11 @@ class Main extends React.Component {
 
             <div className="field">
               <label htmlFor="requirement">該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
-              <input type="radio" name="requirement" id="requirement1" value="1" required />
+              <input type="radio" name="requirement" id="requirement1" value="r1" required />
               <label htmlFor="requirement1">主催者いずれかの知人</label><br />
-              <input type="radio" name="requirement" id="requirement2" value="2" required />
+              <input type="radio" name="requirement" id="requirement2" value="r2" required />
               <label htmlFor="requirement2">高専もしくは技大での在籍経験あり</label><br />
-              <input type="radio" name="requirement" id="requirement3" value="3" required />
+              <input type="radio" name="requirement" id="requirement3" value="r3" required />
               <label htmlFor="requirement3">主催者と共通の知人が参加予定（所謂、友達の友達）</label><br />
             </div>
             <br />
@@ -371,8 +369,6 @@ class Main extends React.Component {
             <ul className="actions">
               <li>
                 <input type="submit" value="Entry" className="special" />
-                {//<input type="submit" value="Entry" className="special" onClick={() => {this.undisabled()}} />
-                }
               </li>
               <li>
                 <input type="reset" value="Reset" />
