@@ -297,20 +297,20 @@ class Main extends React.Component {
 
             <div className="field">
               <label htmlFor="sex">性別<abbr title="required">*</abbr></label>
-              <input type="radio" name="sex" id="male" value="male" required />
+              <input type="radio" name="sex" id="male" value="男" required />
               <label htmlFor="male">男</label>
-              <input type="radio" name="sex" id="female" value="female" required />
+              <input type="radio" name="sex" id="female" value="女" required />
               <label htmlFor="female">女</label>
             </div>
             <br />
 
             <div className="field">
               <label htmlFor="requirement">該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
-              <input type="radio" name="requirement" id="requirement1" value="r1" required />
+              <input type="radio" name="requirement" id="requirement1" value="主催者いずれかの知人" required />
               <label htmlFor="requirement1">主催者いずれかの知人</label><br />
-              <input type="radio" name="requirement" id="requirement2" value="r2" required />
+              <input type="radio" name="requirement" id="requirement2" value="高専もしくは技大での在籍経験あり" required />
               <label htmlFor="requirement2">高専もしくは技大での在籍経験あり</label><br />
-              <input type="radio" name="requirement" id="requirement3" value="r3" required />
+              <input type="radio" name="requirement" id="requirement3" value="主催者と共通の知人が参加予定（所謂、友達の友達）" required />
               <label htmlFor="requirement3">主催者と共通の知人が参加予定（所謂、友達の友達）</label><br />
             </div>
             <br />
@@ -332,7 +332,7 @@ class Main extends React.Component {
                 以下のリンク先「参加規約」をご確認ください（新しいタブが開きます）。
               <abbr title="required">*</abbr></label>
               {termsCheck}<br /><br />
-              <input type="checkbox" name="termscheck" id="termscheck" value="termscheck" required />
+              <input type="checkbox" name="termscheck" id="termscheck" value="checked" required />
               <label htmlFor="termscheck">確認</label>
             </div>
             <br />
@@ -361,7 +361,7 @@ class Main extends React.Component {
             </ol>
             以上をご理解の上、下の「同意する」にチェックをお願いします。
             </p>
-            <input type="checkbox" name="agreementcheck" id="agreementcheck" value="agreementcheck" required />
+            <input type="checkbox" name="agreementcheck" id="agreementcheck" value="checked" required />
             <label htmlFor="agreementcheck">同意する</label>
           </div>
           <br />
