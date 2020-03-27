@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-//import pic02 from '../images/pic02.jpg'
 //import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
@@ -44,19 +43,44 @@ class Main extends React.Component {
     );
 
     const yearsOption = [];
+    yearsOption.push(<option value="">--西暦--</option>);
     for (let y = this.state.startYear; y <= this.state.endYear; y++) {
       yearsOption.push(<option value={y}>{y}</option>);
     }
 
     const monthsOption = [];
+    monthsOption.push(<option value="">--月--</option>);
     for (let m = 1; m <= 12; m++) {
       monthsOption.push(<option value={m}>{m}</option>);
     }
 
     const days = [31,(this.state.isUru?29:28),31,30,31,30,31,31,30,31,30,31];
     const dateOption = [];
+    dateOption.push(<option value="">--日--</option>);
     for (let d = 1; d <= days[this.state.selectMonth-1]; d++) {
       dateOption.push(<option value={d}>{d}</option>);
+    }
+
+    const jobs = [
+      '会社員',
+      '会社役員',
+      '公務員',
+      '教職員',
+      '医師',
+      '歯科医師',
+      '弁護士・会計士・税理士',
+      '司法書士・行政書士等',
+      '自営業',
+      '契約社員',
+      'パート・アルバイト',
+      '学生',
+      '無職',
+      'その他（備考欄に詳細をお願いいたします）'
+    ];
+    const jobsOption = [];
+    jobsOption.push(<option value="">--選択してください--</option>);
+    for (let j = 0; j < jobs.length; j++) {
+      jobsOption.push(<option value={jobs[j]}>{jobs[j]}</option>);
     }
 
     return (
@@ -114,15 +138,8 @@ class Main extends React.Component {
             その間に何で遊びたいか考えておくと、ワクワクするかもしれません。<br />
             続報をお待ちください。
             {/*
-            参加希望の方はEntryページの参加フォームをご記入の上、「ENTRY」ボタンより送信をお願いいたします。<br />
+            参加希望の方はトップページの「Entry」へ！<br />
             ぜひぜひご参加ください！<br />
-            */
-            }
-          </p>
-          <p>
-            {/*
-            Welcome to "DimensionP3" !<br />
-            Get Ready !
             */
             }
           </p>
@@ -137,11 +154,6 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h1 className="major">Access</h1>
-          {/*
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          */}
           <p>
             ◆第１回◆<br />
             開催日：2020年9月19日(土)～21日(月)（二泊三日）<br />
@@ -214,19 +226,19 @@ class Main extends React.Component {
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">氏名<abbr title="required">*</abbr></label>
+              <label htmlFor="name">■氏名<abbr title="required">*</abbr></label>
               <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="ruby">よみがな<abbr title="required">*</abbr></label>
+              <label htmlFor="ruby">■よみがな<abbr title="required">*</abbr></label>
               <input type="text" name="ruby" id="ruby" required />
             </div>
             <div className="field">
-              <label htmlFor="email">Email<abbr title="required">*</abbr></label>
+              <label htmlFor="email">■Email<abbr title="required">*</abbr></label>
               <input type="text" name="email" id="email" required />
             </div>
             <div className="field">
-              <label htmlFor="message">お問い合わせ内容<abbr title="required">*</abbr></label>
+              <label htmlFor="message">■お問い合わせ内容<abbr title="required">*</abbr></label>
               <textarea name="message" id="message" rows="5" required></textarea>
             </div>
             <ul className="actions">
@@ -259,44 +271,44 @@ class Main extends React.Component {
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
-              <label htmlFor="name">氏名<abbr title="required">*</abbr></label>
+              <label htmlFor="name">■氏名<abbr title="required">*</abbr></label>
               <input type="text" name="name" id="name" required />
             </div>
             <div className="field half">
-              <label htmlFor="ruby">よみがな<abbr title="required">*</abbr></label>
+              <label htmlFor="ruby">■よみがな<abbr title="required">*</abbr></label>
               <input type="text" name="ruby" id="ruby" required />
             </div>
 
             <div className="field half first">
-              <label htmlFor="hn">ハンドルネーム<abbr title="required">*</abbr></label>
+              <label htmlFor="hn">■ハンドルネーム<abbr title="required">*</abbr></label>
               <input type="text" name="hn" id="hn" required />
             </div>
             <div className="field half">
-              <label htmlFor="email"><b>Email</b><abbr title="required">*</abbr></label>
+              <label htmlFor="email"><b>■Email</b><abbr title="required">*</abbr></label>
               <input type="text" name="email" id="email" required />
             </div>
 
             <div className="field third first">
-              <label htmlFor="birth">生年月日<abbr title="required">*</abbr></label>
-              <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}}>
+              <label htmlFor="birth">■生年月日<abbr title="required">*</abbr></label>
+              <select name="selectYear" id="selectYear" onChange={(event) => {this.uru(event)}} required>
                 {yearsOption}
               </select><div align="right">年</div>
             </div>
             <div className="field third second">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="selectMonth" id="selectMonth" onChange={(event) => {this.setSelectMonth(event)}}>
+              <select name="selectMonth" id="selectMonth" onChange={(event) => {this.setSelectMonth(event)}} required>
                 {monthsOption}
               </select><div align="right">月</div>
             </div>
             <div className="field third">
               <label htmlFor="birth"><abbr title="required">*</abbr></label>
-              <select name="selectDate" id="selectDate">
+              <select name="selectDate" id="selectDate" required>
                 {dateOption}
               </select><div align="right">日</div>
             </div>
 
             <div className="field">
-              <label htmlFor="sex">性別<abbr title="required">*</abbr></label>
+              <label htmlFor="sex">■性別<abbr title="required">*</abbr></label>
               <input type="radio" name="sex" id="male" value="男" required />
               <label htmlFor="male">男</label>
               <input type="radio" name="sex" id="female" value="女" required />
@@ -304,8 +316,38 @@ class Main extends React.Component {
             </div>
             <br />
 
+            {
+            /* 郵便番号（ハイフン不要）
             <div className="field">
-              <label htmlFor="requirement">該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
+              <label htmlFor="postal">■郵便番号（ハイフン不要）<abbr title="required">*</abbr></label>
+              <input type="text" name="postal" id="postal" required />
+            </div>
+            */
+            }
+
+            {
+            /* 住所
+            <div className="field">
+              <label htmlFor="address">■住所<abbr title="required">*</abbr></label>
+              <input type="text" name="address" id="address" required />
+            </div>
+            */
+            }
+
+            {
+            /* 職業（選択式）
+            <div className="field">
+              <label htmlFor="job">■職業<abbr title="required">*</abbr></label>
+              <select name="selectJob" id="selectJob" required>
+                {jobsOption}
+              </select>
+            </div>
+            <br />
+            */
+            }
+
+            <div className="field">
+              <label htmlFor="requirement">■該当する参加条件にチェックを入れてください。<abbr title="required">*</abbr></label>
               <input type="radio" name="requirement" id="requirement1" value="主催者いずれかの知人" required />
               <label htmlFor="requirement1">主催者いずれかの知人</label><br />
               <input type="radio" name="requirement" id="requirement2" value="高専もしくは技大での在籍経験あり" required />
@@ -316,31 +358,20 @@ class Main extends React.Component {
             <br />
 
             <div className="field">
-              <label htmlFor="event">合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
-              <input type="text" name="event" id="event" />
-            </div>
-            <br />
-
-            <div className="field">
-              <label htmlFor="note">備考</label>
-              <textarea name="note" id="note" rows="3"></textarea>
-            </div>
-            <br />
-
-            <div className="field">
               <label htmlFor="terms">
-                以下のリンク先「参加規約」をご確認ください（新しいタブが開きます）。
+                ■以下のリンク先「参加規約」をご確認ください（新しいタブが開きます）。
               <abbr title="required">*</abbr></label>
               {termsCheck}<br /><br />
               <input type="checkbox" name="termscheck" id="termscheck" value="checked" required />
-              <label htmlFor="termscheck">確認</label>
+              <label htmlFor="termscheck">確認<abbr title="required">*</abbr></label>
             </div>
             <br />
 
           <div className="field">
-            <label htmlFor="prohibition">以下の「禁止行為・持込禁止物」をお読みください。<abbr title="required">*</abbr></label>
+            <label htmlFor="prohibition">
+              ■以下の「禁止行為・持込禁止物」をお読みください。<abbr title="required">*</abbr></label>
             <p>
-              ◆禁止行為◆<br />
+              【禁止行為】<br />
               　本ゲーム合宿では、以下の行為を禁止します。違反した場合は次回からの参加をお断りする場合があります。
               <ol>
                 <li>会場施設を乱暴に扱うこと</li>
@@ -351,7 +382,7 @@ class Main extends React.Component {
                 <li>法令に違反する行為</li>
                 <li>その他、主催者・警察署・消防署の指示に従わない行為</li>
               </ol>
-              ◆持込禁止物◆<br />
+              【持込禁止物】<br />
               　本ゲーム合宿では、以下の物品の持ち込みを禁止します。違反した場合は次回からの参加をお断りする場合があります。
             <ol>
               <li>消防法での危険物とされるもの（燃料・火薬・発火物など）</li>
@@ -362,9 +393,20 @@ class Main extends React.Component {
             以上をご理解の上、下の「同意する」にチェックをお願いします。
             </p>
             <input type="checkbox" name="agreementcheck" id="agreementcheck" value="checked" required />
-            <label htmlFor="agreementcheck">同意する</label>
+            <label htmlFor="agreementcheck">同意する<abbr title="required">*</abbr></label>
           </div>
           <br />
+
+          <div className="field">
+              <label htmlFor="event">■合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
+              <input type="text" name="event" id="event" />
+            </div>
+
+            <div className="field">
+              <label htmlFor="note">■備考</label>
+              <textarea name="note" id="note" rows="3"></textarea>
+            </div>
+            <br />
 
             <ul className="actions">
               <li>
