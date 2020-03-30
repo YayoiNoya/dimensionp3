@@ -11,7 +11,7 @@ const Header = (props) => (
                 <h1>DimensionP3</h1>
                 <p>
                 ゲーム合宿企画<br />
-                Let's play something !<br />
+                Let's Play a Game!<br />
                 《5月1日エントリー受付開始》
                 </p>
             </div>
@@ -24,9 +24,10 @@ const Header = (props) => (
                 <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
             <ul className="entrybtn">
-                {//<li><a href="javascript:void(0)">Coming Soon</a></li>
+                {
+                <li><a href="javascript:void(0)">Coming Soon</a></li>
+                //<li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
                 }
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
             </ul>
         </nav>
     </header>

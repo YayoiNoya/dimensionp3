@@ -61,6 +61,8 @@ class Main extends React.Component {
       dateOption.push(<option value={d}>{d}</option>);
     }
 
+    {
+    /*
     const jobs = [
       '会社員',
       '会社役員',
@@ -81,6 +83,8 @@ class Main extends React.Component {
     jobsOption.push(<option value="">--選択してください--</option>);
     for (let j = 0; j < jobs.length; j++) {
       jobsOption.push(<option value={jobs[j]}>{jobs[j]}</option>);
+    }
+    */
     }
 
     return (
@@ -156,7 +160,7 @@ class Main extends React.Component {
           <h1 className="major">Access</h1>
           <p>
             ◆第１回◆<br />
-            開催日：2020年9月19日(土)～21日(月)（二泊三日）<br />
+            開催期間：2020年9月19日(土)～21日(月)（二泊三日）<br />
             開催場所：東京都葛飾区の宿泊施設（一棟貸切）<br />
             （詳細は参加者にのみ通知）
           </p>
