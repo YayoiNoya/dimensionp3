@@ -186,8 +186,7 @@ class Main extends React.Component {
           </p>
           <p>
             2020年<br />
-              　&ensp;4月 │Webサイト「DimensionP3」公開<br />
-              　&ensp;5月 │第１回参加者募集開始<br />
+            　&ensp;5月 │第１回参加者募集開始<br />
           </p>
           {/*
           <ul className="icons">
