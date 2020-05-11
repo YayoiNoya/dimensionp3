@@ -12,7 +12,7 @@ const Header = (props) => (
                 <p>
                 ゲーム合宿企画<br />
                 Let's Play a Game!<br />
-                《5月1日エントリー受付開始》
+                《7月31日エントリー受付開始》
                 </p>
             </div>
         </div>
