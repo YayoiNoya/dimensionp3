@@ -13,7 +13,7 @@
 
 // Size.
 	$size: (
-		border-radius:				4px,
+		border-radius:				8px,
 		border-width:				1px,
 		element-height:				2.75rem,
 		element-margin:				2rem
@@ -26,7 +26,7 @@
 		weight:						300,
 		weight-bold:				600,
 		letter-spacing:				0.2rem,
-		letter-spacing-heading:		0.5rem
+		letter-spacing-heading:		0.4rem
 	);
 
 // Palette.
@@ -38,6 +38,6 @@
 		fg-bold:					#ffffff,
 		fg-light:					rgba(255,255,255,0.5),
 		border:						#ffffff,
-		border-bg:					rgba(255,255,255,0.075),
+		border-bg:					rgba(255,255,255,0.05),
 		border-bg-alt:				rgba(255,255,255,0.175)
 	);

@@ -225,7 +225,7 @@ class Main extends React.Component {
             お問い合わせ、ご質問等は本フォームからお願いいたします。<br />
             <br />
             <abbr title="required">*</abbr> は必須項目です。<br />
-            必須項目をご記入の上、一番下の「<b>SEND MESSAGE</b>」ボタンを押してください。
+            必須項目をご記入の上、一番下の「送信」ボタンを押してください。
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -246,10 +246,7 @@ class Main extends React.Component {
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
-              </li>
-              <li>
-                <input type="reset" value="Reset" />
+                <input type="submit" value="送信" className="special" />
               </li>
             </ul>
           </form>
@@ -270,7 +267,7 @@ class Main extends React.Component {
             参加申請は本フォームからお願いいたします。<br />
             <br />
             <abbr title="required">*</abbr> は必須項目です。<br />
-            必須項目をご記入・ご確認の上、一番下の「<b>ENTRY</b>」ボタンを押してください。
+            必須項目をご記入・ご確認の上、一番下の「送信」ボタンを押してください。
           </p>
           <input type="hidden" name="bot-field" />
             <div className="field half first">
@@ -413,10 +410,7 @@ class Main extends React.Component {
 
             <ul className="actions">
               <li>
-                <input type="submit" value="Entry" className="special" />
-              </li>
-              <li>
-                <input type="reset" value="Reset" />
+                <input type="submit" value="送信" className="special" />
               </li>
             </ul>
           </form>
