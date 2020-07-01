@@ -29,6 +29,14 @@
 			width: 40rem;
 			max-width: 100%;
 			background-color: transparentize(_palette(bg), 0.15);
+			box-shadow: 9px 9px 16px rgba(12, 12, 12, .9),
+						-9px -9px 16px rgba(172, 172, 172, .5),
+						inset 3px 3px 7px rgba(172, 172, 172, .075),
+						inset -3px -3px 7px rgba(171, 172, 172, .15);
+			background: linear-gradient(318.32deg,
+									rgba(172, 172, 172, 0.01) 0%,
+									rgba(172, 172, 172, 0.01) 55%,
+									rgba(172, 172, 172, 0.05) 100%);
 			border-radius: _size(border-radius);
 			opacity: 0;
 
@@ -70,6 +78,11 @@
 					background-position: center;
 					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="2" y1="2" x2="18" y2="18" /><line x1="18" y1="2" x2="2" y2="18" /></svg>');
 					background-size: 20px 20px;
+					background-color: rgb(177, 53, 37);
+					box-shadow: -2px -2px 5px rgba(172, 172, 172, .5),
+								-2px -2px 4px rgba(172, 172, 172, .3),
+								2px 2px 3px rgba(172, 172, 172, .05),
+								2px 2px 4px rgba(177, 53, 37, 0.15);
 					background-repeat: no-repeat;
 				}
 
@@ -81,7 +94,11 @@
 
 				&:active {
 					&:before {
-						background-color: _palette(border-bg-alt);
+						// background-color: _palette(border-bg-alt);
+						box-shadow: inset -2px -2px 4px rgba(172, 172, 172, .4),
+									inset -2px -2px 3px rgba(172, 172, 172, .2),
+									inset 2px 2px 2px rgba(12, 12, 12, .05),
+									inset 4px 4px 8px rgba(12, 12, 12, .15);
 					}
 				}
 			}

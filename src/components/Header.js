@@ -24,11 +24,11 @@ const Header = (props) => (
                 <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
             <ul className="entrybtn">
-                {
+            {
                 <li><a href="javascript:void(0)">Coming Soon</a></li>
                 //<li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
-                }
-            </ul>
+            }
+                </ul>
         </nav>
     </header>
 )
