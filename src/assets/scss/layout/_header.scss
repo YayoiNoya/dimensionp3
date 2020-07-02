@@ -75,7 +75,7 @@
 					'opacity #{_duration(article)} ease-in-out'
 				));
 				@include vendor('transition-delay', '0.5s');
-				padding: 3rem 2rem;
+				padding: 1.5rem 1rem;
 				max-height: 40rem;
 				overflow: hidden;
 
@@ -91,7 +91,7 @@
 			p {
 				text-transform: none;
 				letter-spacing: _font(letter-spacing);
-				font-size: 1.0rem;
+				font-size: 1.125rem;
 				line-height: 2;
 			}
 		}
@@ -121,7 +121,7 @@
 						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
 						text-transform: none;
 						letter-spacing: _font(letter-spacing);
-						font-size: 1rem;
+						font-size: 1.125rem;
 						border-bottom: 0;
 					}
 				}
@@ -229,11 +229,11 @@
 
 			.content {
 				.inner {
-					padding: 2.5rem 1rem;
+					padding: 1.5rem 1rem;
 				}
 
 				p {
-					font-size: 1.0rem;
+					font-size: 1.125rem;
 					line-height: 1.875;
 				}
 			}
@@ -244,7 +244,7 @@
 
 			.content {
 				.inner {
-					padding: 2.5rem 0;
+					padding: 1.5rem 0;
 				}
 			}
 
