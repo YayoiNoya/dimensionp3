@@ -398,21 +398,21 @@ class Main extends React.Component {
           <br />
 
           <div className="field">
-              <label htmlFor="event">■合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
-              <input type="text" name="event" id="event" />
-            </div>
+            <label htmlFor="event">■合宿中にやりたいこと（ゲーム名など）があればご自由にお書きください。</label>
+            <input type="text" name="event" id="event" />
+          </div>
 
-            <div className="field">
-              <label htmlFor="note">■備考</label>
-              <textarea name="note" id="note" rows="3"></textarea>
-            </div>
-            <br />
+          <div className="field">
+            <label htmlFor="note">■備考</label>
+            <textarea name="note" id="note" rows="3"></textarea>
+          </div>
+          <br />
 
-            <ul className="actions">
-              <li>
-                <input type="submit" value="送信" className="special" />
-              </li>
-            </ul>
+          <ul className="actions">
+            <li>
+              <input type="submit" value="送信" className="special" />
+            </li>
+          </ul>
           </form>
           {close}
         </article>

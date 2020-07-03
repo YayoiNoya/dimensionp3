@@ -6,6 +6,14 @@
 
 /* Button */
 
+	input[type="submit"]::-moz-focus-inner,
+	input[type="reset"]::-moz-focus-inner,
+	input[type="button"]::-moz-focus-inner,
+	button::-moz-focus-inner,
+	.button::-moz-focus-inner {
+		border: 0;
+	}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -14,14 +22,14 @@
 		@include vendor('appearance', 'none');
 		@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out, color #{_duration(transition)} ease-in-out');
 		//background-color: transparent;
-		background-color: #3E6778;
+		background-color: rgba(0, 116, 204, .85);
 		border-radius: _size(border-radius);
 		border: 0;
 		// box-shadow: inset 0 0 0 _size(border-width) _palette(border);
-		box-shadow: -2px -2px 5px rgba(172, 172, 172, .7),
-					-2px -2px 4px rgba(172, 172, 172, .5),
-					2px 2px 3px rgba(172, 172, 172, .075),
-					2px 2px 4px rgba(4, 56, 78, .15);
+		box-shadow: -2px -2px 5px rgba(184, 195, 204, .7),
+					-2px -2px 4px rgba(184, 195, 204, .5),
+					2px 2px 3px rgba(0, 14, 26, .7),
+					2px 2px 4px rgba(0, 14, 26, .5);
 		color: _palette(fg-bold) !important;
 		cursor: pointer;
 		display: inline-block;
@@ -38,20 +46,22 @@
 
 		&:hover {
 			background-color: _palette(border-bg);
-			/*
-			box-shadow: -1.5px -1.5px 3px rgba(172, 172, 172, .6),
-						-1.5px -1.5px 2px rgba(172, 172, 172, .4),
-						2px 2px 2px rgba(172, 172, 172, .05),
-						1px 1px 2px rgba(4, 56, 78, .1);
-			*/
+			box-shadow: -1.5px -1.5px 3px rgba(204, 204, 204, .7),
+						-1.5px -1.5px 2px rgba(204, 204, 204, .5),
+						2px 2px 2px rgba(26, 26, 26, .7),
+						1px 1px 2px rgba(26, 26, 26, .5);
 					}
 
 		&:active {
 			// background-color: _palette(border-bg-alt);
-			box-shadow: inset -2px -2px 4px rgba(172, 172, 172, .7),
-						inset -2px -2px 3px rgba(172, 172, 172, .5),
-						inset 2px 2px 2px rgba(172, 172, 172, .05),
-						inset 4px 4px 8px rgba(4, 56, 78, .15);
+			box-shadow: inset -2px -2px 5px rgba(204, 204, 204, .3),
+						inset -2px -2px 4px rgba(204, 204, 204, .1),
+						inset 2px 2px 5px rgba(26, 26, 26, .7),
+						inset 2px 2px 4px rgba(26, 26, 26, .5);
+		}
+
+		&:focus {
+			outline: none;
 		}
 
 		&.icon {
