@@ -164,9 +164,9 @@
 				@include vendor('display', 'grid');
 				color: rgba(172, 172, 172, .7);
 				box-shadow: inset -2px -2px 4px rgba(172, 172, 172, .6),
-						inset -2px -2px 3px rgba(172, 172, 172, .4),
-						inset 2px 2px 2px rgba(172, 172, 172, .05),
-						inset 4px 4px 8px rgba(12, 12, 12, .15);
+							inset -2px -2px 3px rgba(172, 172, 172, .4),
+							inset 2px 2px 2px rgba(172, 172, 172, .05),
+							inset 4px 4px 8px rgba(12, 12, 12, .15);
 				a {
 					cursor: default;
 

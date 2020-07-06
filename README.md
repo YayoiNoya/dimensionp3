@@ -4,7 +4,7 @@ Gatsby.js V2 starter based on the Dimension site template, designed by HTML5 UP.
 
 ## Preview
 
-https://gatsby-dimension.surge.sh/
+https://dimensionp3.netlify.app/
 
 ## Installation
 
