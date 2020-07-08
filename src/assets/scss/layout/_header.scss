@@ -61,13 +61,13 @@
 
 			h1 {
 				text-transform: none;
-				font-size: 4.5rem;
+				font-size: 4rem;
 			}
 
 			p {
 				text-transform: none;
 				letter-spacing: _font(letter-spacing);
-				font-size: 1.125rem;
+				font-size: 1.25rem;
 				line-height: 2;
 			}
 		}
@@ -98,7 +98,7 @@
 						margin: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
 						text-transform: none;
 						letter-spacing: _font(letter-spacing);
-						font-size: 1.125rem;
+						font-size: 1.25rem;
 						border-radius: _size(border-radius);
 						border: 0;
 						&:focus {
