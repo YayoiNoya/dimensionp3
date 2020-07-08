@@ -3,16 +3,12 @@ import PropTypes from 'prop-types'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
-        <div className="logo">
-            <span className="icon fa-cubes"></span>
-        </div>
         <div className="content">
             <div className="inner">
                 <h1>DimensionP3</h1>
                 <p>
                 ゲーム合宿企画<br />
                 Let's Play a Game!<br />
-                《7月31日エントリー受付開始》
                 </p>
             </div>
         </div>
