@@ -9,7 +9,7 @@
 	#header {
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
-		
+		//@include vendor('align-items', 'center');
 		@include vendor('transition', (
 			'transform #{_duration(article)} ease-in-out',
 			'filter #{_duration(article)} ease-in-out',
@@ -111,7 +111,10 @@
 
 			.navbtn {
 				a {
-					background-color: _palette(border-bg);
+					//background-color: _palette(border-bg);
+					background: linear-gradient(218.16deg,
+								_palette(border-bg-alt) 0%,
+								_palette(border-bg) 100%);
 					box-shadow: -2px -2px 3px rgba(204, 204, 204, .4),
 								-2px -2px 4px rgba(204, 204, 204, .2),
 								2px 2px 4px rgba(26, 26, 26, .9),
@@ -158,7 +161,6 @@
 				}
 			}
 
-			/*
 			&.use-middle {
 				&:after {
 					content: '';
@@ -179,7 +181,6 @@
 					}
 				}
 			}
-			*/
 		}
 
 		.body.is-article-visible & {
