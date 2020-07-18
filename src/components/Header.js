@@ -10,6 +10,9 @@ const Header = (props) => (
                 ゲーム合宿企画<br />
                 Let's Play a Game!<br />
                 </p>
+                <a href="javascript:void(0)" onClick={() => {props.onOpenArticle('covid-19')}}>
+                    新型コロナウイルス感染予防に関するお知らせ(2020/07/31)
+                </a>
             </div>
         </div>
         <nav>

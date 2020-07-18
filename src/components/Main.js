@@ -94,6 +94,30 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
+          id="covid-19"
+          className={`${this.props.article === 'covid-19' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <p><b>新型コロナウイルス感染予防に関するお知らせ</b></p>
+          <p>
+            当団体では、新型コロナウイルス感染症に対する参加者の安全の確保を考え、以下の予防策を実施いたします。<br /><br />
+            <ul>
+              <li>参加者のマスクの着用</li>
+              <li>参加者の手洗い・うがいの徹底</li>
+              <li>参加者の健康チェック</li>
+              <li>テーブル等会場施設の消毒の徹底</li>
+            </ul>
+          </p>
+          <p>
+            参加者の皆さまにはご不便をおかけしますが、ご協力のほどよろしくお願いいたします。<br />
+            最新の情報につきましては、当サイトにて随時更新いたしますのでご確認ください。<br />
+          </p>
+          {close}
+        </article>
+
+        <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -138,14 +162,8 @@ class Main extends React.Component {
             それは後々、強いつながりを生むことになるでしょう。
           </p>
           <p>
-            第１回の参加申請受付は【2020年7月31日】から行います。<br />
-            その間に何で遊びたいか考えておくと、ワクワクするかもしれません。<br />
-            続報をお待ちください。
-            {/*
             参加希望の方はトップページの「Entry」へ！<br />
             ぜひぜひご参加ください！<br />
-            */
-            }
           </p>
           {close}
         </article>
@@ -160,9 +178,15 @@ class Main extends React.Component {
           <h1 className="major">Access</h1>
           <p>
             ◆第１回◆<br />
-            開催期間：2020年9月19日(土)～21日(月)（二泊三日）<br />
+            開催期間：2020年9月19日(土)～21日(月)（二泊三日）
+          </p>
+          <p>
             開催場所：東京都葛飾区の宿泊施設（一棟貸切）<br />
-            （詳細は参加者にのみ通知）
+            ※詳細は参加者にのみ通知
+          </p>
+          <p>
+            参加費：12,000円（宿泊費）<br />
+            ※交通費 / 食費は各自ご負担ください。
           </p>
           {close}
         </article>
