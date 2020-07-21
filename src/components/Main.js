@@ -169,24 +169,43 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="access"
-          className={`${this.props.article === 'access' ? 'active' : ''} ${
+          id="contents"
+          className={`${this.props.article === 'contents' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h1 className="major">Access</h1>
+          <h1 className="major">Contents</h1>
+          <p>
+            【合宿概要】<br />
+            <ul>
+              <li>夜通しTVゲーム大会をする</li>
+              <li>推しボドゲを布教する</li>
+              <li>食事しながら同好の士を探す</li>
+            </ul>
+            … … など「オフラインならではの楽しみ」を味わう。
+          </p>
           <p>
             ◆第１回◆<br />
-            開催期間：2020年9月19日(土)～21日(月)（二泊三日）
+            <span className="ptitle">開催期間</span>：2020年9月19日(土)～21日(月)（二泊三日）
           </p>
           <p>
-            開催場所：東京都葛飾区の宿泊施設（一棟貸切）<br />
-            ※詳細は参加者にのみ通知
+            <span className="ptitle">開催場所</span>：東京都葛飾区の宿泊施設（一棟貸切）<br />
+            ※詳細は参加者にのみ通知いたします。
           </p>
           <p>
-            参加費：12,000円（宿泊費）<br />
+            <span className="ptitle">参加費</span>：12,000円（宿泊費）<br />
             ※交通費 / 食費は各自ご負担ください。
+          </p>
+          <p>
+            <span className="ptitle">募集期間</span>：2020年7月31日(金)～8月14日(金)
+          </p>
+          <p>
+            <span className="ptitle">募集人数</span>：13人<br />
+            ※定員を超えた場合は抽選となります。
+          </p>
+          <p>
+            <span className="ptitle">その他</span>：宿泊施設の利用規約に基づき、住所等の個人情報を提供していただきます。あらかじめご了承ください。
           </p>
           {close}
         </article>

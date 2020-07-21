@@ -18,15 +18,12 @@ const Header = (props) => (
         <nav>
             <ul className="navbtn">
                 <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('about')}}><b>About</b></a></li>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('access')}}><b>Access</b></a></li>
+                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('contents')}}><b>Contents</b></a></li>
                 <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('history')}}><b>History</b></a></li>
                 <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('contact')}}><b>Contact</b></a></li>
             </ul>
             <ul className="entrybtn">
-            {
-                //<li><a href="javascript:void(0)">Coming Soon</a></li>
-                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}>Entry</a></li>
-            }
+                <li><a href="javascript:void(0)" onClick={() => {props.onOpenArticle('entry')}}><b>Entry</b></a></li>
             </ul>
         </nav>
     </header>

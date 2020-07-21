@@ -99,7 +99,7 @@
 
 					a {
 						display: block;
-						min-width: 8.0rem;
+						min-width: 9.0rem;
 						height: 2.75rem;
 						line-height: 2.75rem;
 						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
@@ -146,33 +146,26 @@
 
 			.entrybtn {
 				@include vendor('display', 'grid');
-				background: linear-gradient(218.16deg,
-								rgba(0, 116, 191, 1) 0%,
-								rgba(201, 58, 64, 1) 100%);
-				box-shadow: -2px -2px 4px rgba(172, 172, 172, .4),
-							-2px -2px 3px rgba(172, 172, 172, .2),
-							2px 2px 2px rgba(12, 12, 12, .9),
-							4px 4px 8px rgba(12, 12, 12, .7);
 				a {
-					//cursor: default;
-
+					margin: 0;
+					background: linear-gradient(218.16deg,
+								rgba(0, 116, 191, .85) 0%,
+								rgba(201, 58, 64, .85) 100%);
+					box-shadow: -2px -2px 4px rgba(172, 172, 172, .4),
+								-2px -2px 3px rgba(172, 172, 172, .2),
+								2px 2px 2px rgba(12, 12, 12, .9),
+								4px 4px 8px rgba(12, 12, 12, .7);
 					&:hover {
-						//background-color: none;
-						/*
-						box-shadow: -1.5px -1.5px 5px rgba(172, 172, 172, .2),
-									-1.5px -1.5px 6px rgba(172, 172, 172, .1),
+						box-shadow: -1.5px -1.5px 5px rgba(172, 172, 172, .3),
+									-1.5px -1.5px 6px rgba(172, 172, 172, .2),
 									2px 2px 2px rgba(12, 12, 12, .7),
 									1px 1px 2px rgba(12, 12, 12, .5);
-									*/
 					}
 					&:active {
-						//background-color: none;
-						/*
 						box-shadow: inset -2px -2px 5px rgba(172, 172, 172, .4),
 									inset -2px -2px 4px rgba(172, 172, 172, .2),
 									inset 2px 2px 4px rgba(12, 12, 12, .9),
 									inset 2px 2px 3px rgba(12, 12, 12, .7);
-									*/
 					}
 				}
 			}
@@ -275,8 +268,10 @@
 						}
 
 						a {
-							height: 3rem;
+							height: 100%;
 							line-height: 3rem;
+							padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+							//margin: 0 1.0rem 0 (1.0rem + _font(letter-spacing));
 							margin: 1.25rem 0 (1.25rem + _font(letter-spacing)) 0;
 							min-width: 0;
 							width: 100%;
